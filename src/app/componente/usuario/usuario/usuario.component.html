@@ -28,7 +28,7 @@
             <td>{{student.login}}</td>
             <td>{{student.nome}}</td>
             <td>{{student.email}}</td>
-            <td>{{student.telefone}}</td>
+            <td>{{student.telefone | mask:'(00)0000-0000'}}</td>
             <td><button (click)="deleteUsuario(student.id)" class="btn btn-primary">Delete</button></td>
             <td><button [routerLink]="['/usuarioAdd', student.id]" routerLinkActive="router-link-active"   class="btn btn-warning">Editar</button></td>
 

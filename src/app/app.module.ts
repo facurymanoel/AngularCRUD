@@ -14,6 +14,7 @@ import { ModuleWithProviders } from '@angular/compiler/src/core';
 import { LoginComponent } from './login/login.component';
 import { UsuarioComponent } from './componente/usuario/usuario/usuario.component';
 import { UsuarioAddComponent } from './componente/usuario/usuario-add/usuario-add.component';
+import { NgxMaskModule, IConfig} from 'ngx-mask';
 
 export const appRouters: Routes = [
  
@@ -29,6 +30,12 @@ export const appRouters: Routes = [
 
 export const routes : ModuleWithProviders = RouterModule.forRoot(appRouters);
 
+export const optionsMask : Partial<IConfig> | (() => Partial<IConfig>) = {};
+
+
+
+ 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -43,7 +50,10 @@ export const routes : ModuleWithProviders = RouterModule.forRoot(appRouters);
     FormsModule, 
     HttpClientModule,
     routes,
-    HttpInterceptorModule
+    HttpInterceptorModule,
+    NgxMaskModule.forRoot(optionsMask)
+
+    
   ],
   providers: [],
   bootstrap: [AppComponent]
