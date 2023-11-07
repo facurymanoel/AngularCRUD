@@ -23,6 +23,8 @@ export class UsuarioComponent implements OnInit {
          students: Array<User>;
          
          nome : string;
+         
+         p : number;
 
 
     constructor(private usuarioService : UsuarioService ) { 

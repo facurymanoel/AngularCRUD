@@ -15,6 +15,7 @@ import { LoginComponent } from './login/login.component';
 import { UsuarioComponent } from './componente/usuario/usuario/usuario.component';
 import { UsuarioAddComponent } from './componente/usuario/usuario-add/usuario-add.component';
 import { NgxMaskModule, IConfig} from 'ngx-mask';
+import { NgxPaginationModule} from 'ngx-pagination';
 
 export const appRouters: Routes = [
  
@@ -51,7 +52,8 @@ export const optionsMask : Partial<IConfig> | (() => Partial<IConfig>) = {};
     HttpClientModule,
     routes,
     HttpInterceptorModule,
-    NgxMaskModule.forRoot(optionsMask)
+    NgxMaskModule.forRoot(optionsMask),
+    NgxPaginationModule
 
     
   ],
